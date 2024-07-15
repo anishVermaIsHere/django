@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+
+    <title>Customer Acknowledgement</title>
+<head>
+        
+       <link rel="stylesheet" href="{% static 'css/webp1.css' %}" type="text/css"/>
+</head>
+<body>
+    <div> 
+       <h1> <image src = "{%static 'img/csslogo.jpg'%}" ID="Img1" runat="server" Height="80px" Width="80px"></Image> 
+           CUSTOMER SUPPORT SYSTEM 
+         
+       </h1> 
+    </div>
+     
+    <div> 
+        
+        <table class="tb1" height="" width="100%">
+            <tr>
+                <td> PRODUCTS</td>
+                <td> SOLUTIONS</td>
+                <td> INNOVATIONS</td>
+                <td> CONTACT</td>
+            </tr>
+        </table> 
+            
+    </div>
+
+    <center> <div class="div1"> 
+   
+
+    
+</form>
+
+       
+    <form action>
+    {% csrf_token %}
+
+        <table class="tb2">     
+                                
+            <tr>
+                <td> <center> CUSTOMER ACKNOWLEDGEMENT </td>
+            </tr>
+            <tr> 
+                                 
+                    <td> <left> 
+                    {{form}}
+                      
+                    Acknowledgement No.: {{ackn}}
+        <br> Applicant Name: {{name}} <br><br><br>
+        Father's Name:  {{fath_name}}<br><br><br>
+        Date of Birth: {{dob}}<br>
+                         
+        Current Address: <br><br><br>
+        Permanent Address:  <br>
+        If same as current address: <br><br><br>
+        Mobile No.: <br>
+                        
+        Email: <br><br><br>
+        
+        
+                   </td>  
+
+            </tr>
+            
+            <tr>
+                <td> <center>             
+                <button type = "button" Class="but1"> Print </button>
+                <button type = "button" Class="but2"> Download</button>
+                    </center>
+               </td>
+                
+            </tr>
+        </table> </div>
+
+     </form>
+
+     </center>   
+        
+        
+   
+    
+</body>
+</html>

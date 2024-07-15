@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+
+    <title>Customer Information Form</title>
+<head>
+        
+       <link rel="stylesheet" href="{% static 'css/webp1.css' %}" type="text/css"/>
+</head>
+<body>
+    <div class="header"> 
+        <div class="container">
+       <h1> <image src = "{%static 'img/csslogo.jpg'%}" Height="80px" Width="80px"></Image> 
+          <span> CUSTOMER SUPPORT SYSTEM </span>
+         
+       </h1> 
+        <ul class="nav">
+            <li> PRODUCTS </li>
+            <li> PRODUCTS </li>
+            <li> PRODUCTS </li>
+
+        </ul>
+
+        </div>
+
+    </div>
+     
+    <div> 
+        
+        <table class="tb1" height="" width="100%">
+            <tr>
+                <td> PRODUCTS</td>
+                <td> SOLUTIONS</td>
+                <td> INNOVATIONS</td>
+                <td> CONTACT</td>
+            </tr>
+        </table> 
+            
+    </div>
+
+    <center> <div class="div1"> 
+   
+       
+    <form action=custdet>
+    {% csrf_token %}
+
+        <table class="tb2">     
+                                
+            <tr>
+                <td> <center> CUSTOMER INFORMATION FORM</td>
+            </tr>
+            <tr> 
+                                 
+                    <td> <center>
+        <br> <label for ="cust_name"> Applicant Name : </label> 
+        <input type = "text" id="cust_name" placeholder="Enter applicant name" name="cust_name">  <br><br><br>
+        
+        <label for ="fath_name">Father's Name : </label>
+        <input type = "text" id="fath_name" placeholder="Enter father's name" name="fath_name"> <br><br><br>
+        
+        <label for ="dob">Date of Birth : </label>
+        <input type = "date" id="dob" name="dob"/><br>
+                         <i> example: 05/05/1982  </i><br><br><br>
+        
+        Current Address : <input type = "text" TextBox ID="TextBox4" name="curaddr"></TextBox> <br><br><br>
+        Permanent Address : <input type = "text" TextBox ID="TextBox5" runat="server"></TextBox> <br>
+        If same as current address : <input type = "checkbox" CheckBox ID="CheckBox1" runat="server"></CheckBox><br><br><br>
+        
+        <label for="mob_no"> Mobile No. : </label>
+        <input type = "number" id="mob_no" name="mob_no"></TextBox><br>
+                        <i> example: +91 96805XXXXX  </i><br><br><br>
+        
+        <label for ="cust_email"> Email ID: </label>
+        <input type = "email" id="cust_email" name="cust_email"></TextBox> <br><br><br>
+        
+                   </td>  
+
+            </tr>
+            
+            <tr>
+                <td> <center>             
+                <input type = "submit" Class="but1" value="Submit"> 
+                <input type = "reset" Class="but2" value="Reset">
+                    </center>
+               </td>
+                
+            </tr>
+        </table> </div>
+
+     </form>
+
+     </center>   
+        
+        
+   
+    
+</body>
+</html>

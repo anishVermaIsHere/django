@@ -1,0 +1,46 @@
+
+
+        body {background-color: #476b6b;  font-family: Helvetica;}
+          
+        .footer  { background-color: #0A2F6B; font-weight: bold; height: auto; 
+                    color: white; font-family: Letter Gothic Std; background: url({% static "img/_____.jpg" %}); 
+                    text-align:center;}
+
+        .div1 {background-color: #0A2F6B;}
+
+        .top1 {background-color: #0f48a3; height: 20px;}
+
+        .nav { font-family: Calibri; font-size: 14px; margin: 5px 5px 0px 5px;
+              display: inline-block; float: right; padding: 0px 10px 0px 10px; }
+
+        .nav a { text-decoration: none; padding: 0px 10px 0px 10px; color: #ffffff;}
+        .nav a:hover { color: #008B8B;}
+
+        .top2 { color: white; font-family: Letter Gothic Std; font-size: 20px; margin-top:0px; padding-bottom:0px;
+               }
+
+        h1 {color: white; font-family: STAMPETE; font-size: 40px; }
+
+        .mynav {list-style: none; text-align: right;}
+        .mynav li { display: inline-block; padding: 0px 5px 10px 5px;}
+        .mynav  li  a {  padding: 0px 10px 0px 10px; text-decoration: none; color: #ffffff;}
+        .mynav li  a:hover { color: #008B8B;}
+        
+        .div2 { color: white ; background: url({% static "img/____.jpg" %}) 50% 0 no-repeat fixed; background-color: #1d573b; height:500px; width:auto;}
+        
+        input, select {font-size: 15px; height: 30px;}
+        option {background-color: #162e2e; color:white;}
+
+        .field2 { border:3px solid white; -moz-border-radius:8px;
+                  -webkit-border-radius:8px; border-radius:8px; max-width:300px; padding:36px;	}
+        
+        legend { margin-bottom:0px; margin-left:16px; }
+        
+        table {color: white;}
+        
+        .button { border: 1px solid white; border-radius:18px; background-color: #162e2e; color: white; padding: 5px 10px;
+                  text-align: center; text-decoration: none; display: inline-block;
+                  font-size: 16px; width: 100px; margin: 4px 2px; cursor: pointer;
+                }
+
+        .button:hover {background-color:#346e6e; color: white;}

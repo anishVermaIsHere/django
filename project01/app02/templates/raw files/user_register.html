@@ -1,0 +1,65 @@
+
+{% extends "studentclass_masterpage.html" %}
+
+{% load static %}
+{% block content %}
+
+
+<html>
+<head>
+        <title>Register | Student Class </title>
+       
+    <style>
+
+       .container {color: white; background-color: #0A2F6B; font-family: Letter Gothic Std;}
+
+        h2 {text-align: left; padding: 5px 10px 5px 60px; }
+
+       .container-head { font-family: Letter Gothic Std; background-color: #185173; 
+                        text-align: center; padding: 20px 20px 20px 20px;}
+
+       .register-container {background-color: #DDE3E7; text-align: center; color: black; 
+                        height: 300px; width: 400px; padding: 30px 60px 30px 60px;}
+
+       .img-cont {height:360px; width:500px; vertical-align: middle; border: 9px solid #B1C7D5;}
+
+       .choose {display: inline-block; list-style: none; padding: 10px 20px 10px 20px;}
+
+       .choose a { border: 1px solid #034A25; border-radius:20px; background-color: #06AA55; 
+                    color: white; padding: 5px 10px; text-align: center;
+                   text-decoration: none; display: inline-block; 
+                  font-size: 20px; width: 150px; 
+                }
+
+        .choose a:hover {background-color: #034A25; color: white;}
+
+
+            
+    </style>   
+
+</head>
+
+<body>  
+<div class="container"> 
+     <h2>REGISTER</h2>
+            <div class="container-head">
+                        <center>
+                <div class="register-container"> 
+                    <h3 style="font-size:30px"><b>Register as</b></h3>
+                    <nav class="choose">
+
+                        <a href="student-reg"> STUDENT </a>
+                            <p style="font-size:20px">or</p>
+                        <a href="other-reg"> OTHER </a>
+                        
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+</div>
+
+
+{% endblock %}

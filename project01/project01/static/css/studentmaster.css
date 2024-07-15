@@ -1,0 +1,181 @@
+{% load staticfiles %}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+        body {margin: 10px 20px 10px 20px; background-color: white; #e0ebeb; #B1C7D5;  font-family: 'Quicksand', sans-serif; }
+
+        .div1 {background-color: }
+
+        .top1 {background-color: #000d33; /* #374557, #82A3CC , #0f48a3*/ height: 40px;}
+
+        .nav input[type=text] {width:30%;}
+
+        .nav {font-family: Calibri; font-size: 16px; margin: 5px 0px 5px 0px;
+              display: inline-block; float: right; padding: 5px 10px 5px 10px; }
+
+        .nav a {text-decoration: none; padding: 5px 10px 5px 10px; color: #ffffff;}
+
+        contact { border: 1px solid white; border-radius: 4px; background-color: ;} 
+        
+        a.login { width: 160px; padding: 5px 10px 5px 10px; 
+                  color: white; border-radius: 4px; background-color: #000d33; }
+
+        .register { border: 1px solid white; width: 100px; padding: 5px 10px 5px 10px;  
+                      color: white; border-radius: 4px; } 
+
+        .register:hover { background-color: #00802b; }
+
+        .top2 { background-color: #0A2F6B; color: white; font-size: 16px; padding:5px 10px 0px 10px;}
+
+        h1 { border:3px solid skyblue; display: block; color: white; font-family: Letter Gothic Std; font-size: 40px; 
+                vertical-align:top; padding: 20px 350px 20px 0px; }
+
+            .dropdown {
+                   float: right;
+                   overflow: hidden;
+                   border: hidden;
+                   margin: 10px 0px 0px 0px;
+                }
+
+             .support, .acad-content, .highsec-content, .second-content, .studzone, .about-content {
+                  display: none;
+                  position: absolute;
+                  background-color: #1F2327; 
+                  width: 250px;
+                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                  z-index: 1;
+
+                }
+
+            
+                /* Links inside the dropdown */
+            
+            .about-content a {
+                  float: none;
+                  font-size: 16px;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                  text-align: left;
+                }
+
+            .acad-content a {
+                  float: none;
+                  font-size: 16px;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                  text-align: left;
+                }
+
+            .second-content a {
+                  float: none;
+                  font-size: 16px;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                  text-align: left;
+                }
+
+            .highsec-content a {
+                  float: none;
+                  font-size: 16px;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                  text-align: left;
+                }
+
+             .support a {
+                  float: none;
+                  font-size: 16px;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                  text-align: left;
+                }
+
+             .studzone a {
+                  float: none;
+                  font-size: 16px;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                  text-align: left;
+                }
+
+                /* Add a blue background color to dropdown links on hover */
+                
+            .about-content a:hover {}
+            .second-content a:hover {}
+            .highsec-content a:hover {}
+            .acad-content a:hover {}
+            .support a:hover {}
+            .studzone a:hover {}
+                  
+                 
+                /* Show the dropdown menu on hover */
+
+            .dropdown:hover .about-content {
+                  display: block;
+
+                }
+            .dropdown:hover .second-content {
+                  display: block;
+
+                }
+            .dropdown:hover .highsec-content {
+                  display: block;
+                }
+
+            .dropdown:hover .acad-content {
+                  display: block;
+                }
+            .dropdown:hover .studzone  {
+                  display: block;
+                }
+            .dropdown:hover .support {
+                  display: block;
+                }
+        
+        .logo {text-align: center; width: 25%;}
+
+       .title a {border: 2px solid #1a1919; border-radius: 12px; background-color: #1a1919; color:#ff0000; font-family: Bernard MT Condensed; 
+            font-size: 22px; display:inline-block; text-align: center; padding: 10px; text-decoration: none; }
+
+        .title { width:auto; font: 30px Letter Gothic Std; color: white; background-color:#0A2F6B; 
+            list-style: none; overflow: hidden; padding: 5px 10px 10px 10px; margin:0; float: left; }
+        
+        .main-tab {  background-color:  #0A2F6B; list-style: none; height: 50px;}
+        .main-tab a { padding: 0px 40px 0px 40px; text-decoration: none; color: #ffffff;}
+        .main-tab a:hover { background-color: #0f48a3; }
+        
+        .img-cont { border: 2px solid white; color: white; text-align: center; background-color: white;
+             height:300px; width: auto;}
+
+        .cont-head { color: white;  background-color: white; /*#f0f5f5; #e0ebeb; #ccddff #37659D*/ height:auto; width: auto;}
+        
+        /*button { padding-left:12px; border: hidden; background: url({% static "img/ser.png" %}) text-decoration: none; padding: 5px 0px;
+               width: 20px; height: 20px;  margin: 4px 2px;
+                }*/
+      
+        .footer  { border: 2px solid #0A2F6B; background-color: #000d33; font-weight: bold; height: 250px; 
+                    color: white; font-family: Letter Gothic Std;}
+
+        .footer p {border-top: 2px solid #e0ebeb; text-align: center;}
+        
+        .footer h2 {font-size: 16px; padding: 20px 0px 0px 20px;}
+
+        .social { margin: 5px; display: inline-block; list-style: none; padding: 20px 10px 30px 10px; }
+
+        .social li { display: inline-block; padding: 0px 5px 10px 5px;}
+
+        .social li a { background: url({% static "img/insta.png" %})text-decoration: none; padding: 0px 0px 0px 0px; color: #ffffff;}
+
+        .social li  a:hover { color: #008B8B;}
+
+        .connect {height:40px; width:40px; vertical-align: middle;}
+
+        img:hover {color: white;}
+
+

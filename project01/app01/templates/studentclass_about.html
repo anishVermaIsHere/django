@@ -1,0 +1,59 @@
+
+{% extends "studentclass_masterpage.html" %}
+{% load static %}
+{% block title%} About Us |
+{% endblock title %}
+{% block content %}
+
+
+<html>
+<head>
+      
+       
+    <style>
+
+       .container {border-color: white; border-bottom-style: solid; background-color: #0C4182; color: white; border: 2px solid #0A2F6B; font-family: Letter Gothic Std;}
+
+        h2 {text-align: left; font-size: 20px; padding: 5px 10px 0px 60px; }
+
+       .container-head { border: 1px solid white;background-color: #37659D;/*#185173*/ text-align: left; padding: 20px;
+                        display: flex; justify-content: space-evenly;}
+
+       .contact-img {height:360px; width:500px; padding:20px; 
+                    align-items: center; justify-content: center;}
+
+            
+    </style>   
+
+</head>
+
+<body>  
+<div class="container"> 
+     <h2>ABOUT US</h2>
+        <div class="container-head">
+
+                <div class="field">
+                    <img class="contact-img" src="/static/img/about.jpg" alt="About us" /> 
+                </div>
+
+                <div class="field">
+                
+                    <p> 
+                        STUDY Here is a platform for providing online coaching classes for UG, PG and Schools students since 2018.
+                    </p>
+                    
+                    <p> Registered in 1983 under the Societies Registration Act of XXI of 1860, the Institute has grown into a major national center with considerable international repute. It is also registered under the Income Tax Act as well as Foreign Contribution Regulation Act. In addition, it is also registered with the NitiAyog, Government of India. It is a life member of Indian Association of Social Science Institutions, Global Water Partnership and India Water Partnership. </p>
+
+                    <p> The Institute imparts education and conducts research. The Indira Gandhi National Open University (IGNOU) has designated it as a Programme Study Center (PSC) for imparting education to students in computer applications for its CIT and BCA degrees. The research activities of the Institute are concerned with aspects related to welfare and development of people, specially those belonging to the weaker sections as well as women. These deal with socio-economic, institutional and environmental aspects of rural and urban development involving utilization of resources like land, water, forests, manpower etc. The Institute takes up studies and research, undertakes field surveys, impact evaluation works and micro level planning. </p>
+
+                    <p>The Institute has completed several projects and programs under the above heads. Besides, it also conducts training programmes for in-service officers and organizes policy dialogues, seminars & conferences giving attention to welfare, environment and development. 
+                    The Institute has its own spacious building having a roof top solar system in an easily accessible area in Delhi. It has a growing library, a large computer center, seminar/class rooms, and all basic equipments.</p>
+
+                </div>
+
+        </div>
+       
+</div>
+
+
+{% endblock %}

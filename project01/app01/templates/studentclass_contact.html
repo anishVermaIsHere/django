@@ -1,0 +1,67 @@
+
+{% extends "studentclass_masterpage.html" %}
+
+{% load static %}
+{% block title%} Contact us |
+{% endblock title %}
+{% block content %}
+
+
+<html>
+<head>
+       
+    <style>
+
+       .container {border-color: white; border-bottom-style: solid; background-color: #0C4182; color: white; border: 1px solid #0A2F6B; font-family: Letter Gothic Std; }
+
+        h2 {text-align: left; font-size: 20px; padding: 0px 10px 0px 60px; }
+
+        h4 { font-size: 20px; }
+
+       .container-head { display: flex; justify-content: center; color: black; background-color: white;/*#185173*/ text-align: left; padding: 5px; height: 450px;}
+
+        .contact-card { padding: 0px 10px 0px 40px; align-content: center; height: 400px; width: 100%; }
+
+        .contactimg-card { padding: 0px 10px 0px 10px; align-content: center; height: 400px; width: 100%; }
+
+       .img-container { height: 380px; width: 450; margin: 10px 0px 10px 0px; }
+            
+    </style>   
+
+</head>
+
+<body>  
+<div class="container"> 
+     <h2>CONTACT</h2>
+            <div class="container-head">
+
+                     <div class="contact-card"> 
+                        <h4> STUDY Here </h4>
+                        <p> Office: 2-B, Institutional Area, Karkardooma, Delhi-110092</p>
+
+                        <p> Phone: 011-22377199, 22374975</p>
+
+                        <p> Email: irmed7@gmail.com </p>
+                    </div>
+
+                    <div class="contactimg-card"> 
+                        <img class="img-container" src ="{% static 'img/contactimg.svg' %}"/>
+                    </div>
+
+                    <div class="contact-card"> 
+                                <h4> Write us </h4>
+                            <form action="" method="POST" name="write-form">
+                               
+                                Name:    <input type="text" name="uname"> <br><br>
+                                Email:   <input type="email" name="email"> <br><br>
+                                Message: <textarea id="write" name="write" rows="6" cols="50"> </textarea> <br><br>
+                                <button type="submit" value="Submit">Send </button>
+                            </form>
+
+            </div>
+
+       
+</div>
+
+
+{% endblock %}

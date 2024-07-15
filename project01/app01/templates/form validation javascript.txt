@@ -1,0 +1,61 @@
+       function validate() {
+
+          if (document.userform.fname.value== "") 
+                    {
+                        alert("Please enter the phone or email");
+                        document.userform.fname.focus();
+                        return false;
+                    }
+
+
+         if (document.userform.lname.value== "") 
+                    {
+                        alert("Please select your Date of Birth");
+                        document.userform.lname.focus();
+                        return false;
+                    }
+
+         if (document.userform.phone.value== "") 
+                    {
+                        alert("Please enter your phone number");
+                        document.userform.phone.focus();
+                        return false;
+                    }
+
+         if (document.userform.email.value== "") 
+                    {
+                        alert("Please enter your email id");
+                        document.userform.email.focus();
+                        return false;
+                    }
+
+         if (document.userform.username.value== "") 
+                    {
+                        alert("Please enter the username");
+                        document.userform.username.focus();
+                        return false;
+                    }
+
+         if (document.userform.password1.value== "") 
+                    {
+                        alert("Please enter the password");
+                        document.userform.password1.focus();
+                        return false;
+                    }
+        }
+
+        function validateEmail() 
+            {
+                var emailID = document.userform.email.value;
+                atpos = emailID.indexOf("@");
+                dotpos = emailID.lastIndexOf(".");
+         
+                    if (atpos < 1 || ( dotpos - atpos < 2 )) 
+                    {
+                        alert("Please add @")
+                        document.userform.email.focus();
+                        return false;
+                    }
+                return( true );
+            }
+        

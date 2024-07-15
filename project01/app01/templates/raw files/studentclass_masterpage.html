@@ -1,0 +1,70 @@
+{% load static %}
+
+
+
+<html>
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/studentmaster.css' %}" type="text/css"/>
+    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">-->
+        
+</head>
+
+<body>                      
+                                <!-- Header of the page -->
+<div class="div1">
+    <div class="top1">
+        <nav class="nav">  
+
+                  <a href="/login">Login </a> 
+                  <a href="/register">Register </a>    
+                  <input type="text" placeholder="Search..." name="searchbar">    
+                  <button type="submit" name="searchbut" value=""></button>                
+                <!--<form class="example" action="_______" style="width:150px">
+                                <input type="text" placeholder="Search.." name="search2">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                -->
+                    
+        </nav>
+    </div>
+
+      <div class="top2">
+        <div class="maintitle"> 
+            <strong> <a href="/"> STUDENT CLASS </a></strong>
+        </div>
+        <nav class="mynav">
+           
+                    <li> <a href="about-us">ABOUT US</a> </li>
+                        <li> <a href="acad">ACADEMICS</a> </li>
+                        <li> <a href="studzone">STUDENT ZONE</a> </li>
+                    <li> <a href="contact">CONTACT US</a> </li>            
+            
+        </nav>
+      </div>
+</div>     
+                 
+
+{% block content %}
+ {% endblock %}   
+
+ <div class="footer">
+  <h2>Connect with us</h2>
+<ul class="social">
+
+    <li><a class="youtube" href="http://www.youtube.com/studentclass"><img class="connect" src="/static/img/youtube.jpg" alt="Youtube" /> </a></li>
+    <li><a class="facebook" href="https://www.facebook.com/studentclass"><img class="connect" src="/static/img/fb.png" alt="Facebook" /> </a></li>
+    <li><a class="twitter" href="https://twitter.com/studentclass"><img class="connect" src="/static/img/twitter.jpg" alt="Twitter" /> </a></li>
+    <li><a class="instagram" href="http://instagram.com/studentclass">  <img class="connect" src="/static/img/insta.png" alt="Instagram" /> </a></li>
+    <li><a class="linkedin" href="https://www.linkedin.com/studentclass"><img class="connect" src="/static/img/linkedin.png" alt="Linkedin" /> </a></li>
+
+</ul>
+         
+          <p style="font-size: 12px"> This Web page is designed by Anish
+            <br> &copy; 2020-2021 Student Class. All Rights Reserved. </p>
+
+    </div>
+
+</body>
+</html>
+
+  

@@ -1,0 +1,232 @@
+
+
+<html>
+<head>
+	<title>Web Basics</title>
+
+	<style>
+
+			body { font-family: sans-serif; }
+			header {
+				width: 100%;
+				height: 8vh;
+				background-color: #52527a;
+				color: white;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				width: 15%;
+				text-align: center;
+
+			}
+
+			.pages {
+				width: 50%;
+				display: flex;
+				justify-content: space-between;
+				text-decoration: none;
+			}
+
+			.pages a {
+				padding: 0px 30px 0px 30px;
+				text-decoration: none;
+				color: white;
+				transition: color 2s;
+			}
+
+			.pages a:hover {
+				color: #b366ff;
+
+			}
+
+			.body-content { 
+				padding: 10px 10px 10px 10px;
+				/*background-color: #3385ff;*/
+				clip-path: polygon(50% 0%, 100% 0, 100% 60%, 54% 100%, 0 100%, 0% 60%, 0 0);
+				background-image: linear-gradient(#9494b8, #d1d1e0);
+
+
+			}
+			.footer-content {
+				width: 100%;
+				height: 8vh;
+				background-color: #52527a;
+				color: white;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.flex-container {
+			        width: 100%;
+			        margin-top: 5px;
+			        min-height: 300px;
+			        display: -webkit-flex; /* Safari */     
+			        display: flex; /* Standard syntax */
+			        border: 1px solid #808080;
+			    }
+
+    			.flex-container div {
+		        background: #dbdfe5;
+		        border: 1px solid green;
+		        -webkit-flex: 1; /* Safari */
+		        -ms-flex: 1; /* IE 10 */
+		        flex: 1; /* Standard syntax */
+		    	}
+
+		    	img.fleximage { height: 300px; width: 100%; }
+	</style>
+
+	<script src="sample.js"></script>
+</head>
+
+<body>
+	<header> 
+			<div class="logo">Web Beginner</div>
+			<div class="pages">
+				<a href="#">HTML</a>
+				<a href="#">CSS</a>
+				<a href="#">JAVASCRIPT</a>
+				<a href="#">ABOUT</a>
+				<a href="#">CONTACT US</a>
+
+			</div>
+
+	</header>
+
+<div class="flex-container">
+        <div class="item">
+        	<img src="designnn-co-bXVtRwsRQTQ-unsplash.jpg" class="fleximage" alt="image"/>  
+        </div>
+        <div class="item">Item 2</div>
+
+        <div class="item">Item 3</div>
+        
+    </div>
+
+<div class="body">
+
+	<div class="body-content">
+				<ul> <h3>The HTML input types and tags are following:</h3>
+
+					<li> Date: <input type="date"> </li>
+					<li> Date Time: <input type="datetime"> </li>
+					<li> Local Date Time: <input type="datetime-local"> </li>
+					<li> Time: <input type="time"> </li>
+					<li> Month: <input type="month"> </li>
+					<li> Number: <input type="number" min="-5" max="25" step="5"> </li>
+					<li> Range: <input type="range" min="-5" max="100" step="2"> </li>
+					<li> Telephone: <input type="tel"> </li>
+					<li> Email: <input type="email"> </li>
+					<li> URL: <input type="url"> </li>
+						 
+					<li> TextArea: </li>
+					
+						<textarea id="w3review" name="w3review" rows="4" cols="50">
+
+						</textarea>
+					
+
+					<li> 
+						Datalist(Animals): <input type="text" list="animals"> 
+						<datalist id="animals">
+							<option>Dog</option>
+							<option>Cat</option>
+							<option>Cow</option>
+							<option>Goat</option>
+							<option>Pig</option>
+						</datalist>
+					</li>
+
+					<li> Select (Vehicles):
+						<select id="big-vehicles"> 
+							<option>Bicycle</option>
+							<option>Bike</option>
+							<option>Car</option>
+							<option>Van</option>
+							<option>Bus</option>
+							<option>Truck</option>
+
+						</select>
+
+					</li>
+
+					<li> 
+						Menu (type1): <menu type="toolbar" label="File" id="filemenu"> 
+									
+									<li><a href="javascript:newItem();"> New </a></li>
+									<li><a href="javascript:openItem();"> Open </a></li>
+									<li><a href="javascript:closeItem();"> Close </a></li>
+									<hr>
+									<li><a href="javascript:saveItem();"> Save </a></li>
+									<li><a href="javascript:saveAsItem();"> Save as </a></li>
+									<hr>
+									<li><a href="javascript:exitApp();"> Exit </a></li>
+							   </menu>
+					</li>
+
+					<li> 
+						Menu (type2): 
+								<menu type="command" label="main-menu"> 
+									
+									<command type="command" label="Add" icon="addicon.svg"> 
+									<command type="command" label="Edit" icon="editicon.svg"> 
+									<command type="command" label="Delete" icon="delicon.svg">
+									<hr>
+									<menu type="command" label="Theme" id="theme">
+										<command type="radio" label="Classic" radiogroup="theme"> 
+										<command type="radio" label="Dark" radiogroup="theme"> 
+										<command type="radio" label="Light" radiogroup="theme">
+									</menu>
+									<hr>
+							   </menu>
+					</li>
+
+					<li> Meter:
+						<meter min="0" max="100" low="3" optimum="7" high="9" value="9.5"></meter>
+
+					</li>
+
+					<li> Progress:
+						<progress max="100.00" value="9.56">9.56%</progress>
+
+					</li>
+
+					<li>
+
+					</li>
+				</ul>
+	
+
+			<div contextmenu="simple-menu"><li> Widget</li> </div>
+
+			<div class="div1">
+				<li> Bdo {dir="ltr"}: It's showing the text from left to right direction.<br>
+				<b><bdo dir="ltr">She shouted,<q> We have to win.</q></bdo> </b> 
+				</li>
+
+				<li>
+				 Bdo {dir="rtl"}: It's showing the text from right to left direction.<br>
+				<b><bdo dir="rtl">She shouted,<q> We have to win.</q></bdo> </b>
+				</li>
+
+			</div>
+
+	</div>
+
+</div>
+
+
+</body>
+
+<footer> 
+			<div class="footer-content">
+				
+				This web page is developed by Anish 
+
+			</div>
+
+</footer>
+</html> 

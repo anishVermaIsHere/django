@@ -1,0 +1,137 @@
+
+{% extends "studentclass_masterpage.html" %}
+
+{% load static %}
+{% block content %}
+
+
+<title> Student Registration Details  </title>
+  <style type="text/css">
+       
+        .container {border-color: white; border-bottom-style: solid; background-color: #0C4182; color: white; border: 2px solid #0A2F6B; font-family: Letter Gothic Std;}
+
+         h2 {text-align: left; font-size: 20px; padding: 5px 10px 0px 60px;}
+
+       .container-head { border:1px solid black; font-family: Letter Gothic Std; font-size: 16px; 
+                      background-color: #fff; text-align: center; padding: 20px 20px 20px 20px;}
+
+        .field { font-family: Tahoma; font-size: 20px; border:3px solid #ECF0F1; -moz-border-radius:8px; 
+                  color: black; background-color: #ECF0F1; -webkit-border-radius:8px; 
+                    border-radius:8px; max-width:500px; padding:36px; 
+                box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);}
+
+        table {font-family: Helvetica; font-size: 16px; }
+
+        .print, .download {display: inline-block; list-style: none; padding: 5px 30px 5px 30px; }
+
+        .print, .download{ border: 1px solid #034A25; border-radius:20px; background-color: #0077b3; 
+            color: white; padding: 5px 10px; text-align: center; font-size: 12px; 
+            display: inline-block; height: 30px; width: 80px;}
+
+        .download:hover, .print:hover {background-color: #00334d; color: white;}
+
+
+   </style>
+
+                                <!-- Student Registration Details -->
+
+<div class="container"> 
+     <h2>STUDENT REGISTERATION</h2>
+        <div class="container-head"><center>
+            <form action="studentregister_details" onsubmit="return(validate());" method="post" target="_blank" id="button" name="userinfo">
+                {% csrf_token %}
+                   <div class="field">
+    
+   <strong>  Registration Details</strong><br><br>
+        <table height="auto" width="500px">
+           <tr>
+                <td colspan="3" style="background-color: grey; color: white;" height="10%"><label for="name"> 
+                <center> User Details </center> </label> </td>
+
+          </tr> 
+        <tr>
+                <td height="10%" width="20%">  <label for="useremail"><b>Username  </label> </td>
+           
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp; {{formusername}} 
+                      
+                </td>
+        </tr>
+
+        <tr>
+                <td  height="10%" width="50%"> <label for="username"><b>Name  </label> </td>
+              
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp;  {{formname | capfirst }} 
+                </td>
+        </tr>
+
+        <tr>
+                <td  height="10%" width="20%"> <label for="usersex"><b>Sex  </label> </td>
+          
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp;  {{formsex | capfirst}} 
+                </td>
+        </tr>
+
+        <tr>
+                <td height="10%" width="20%"> <label for="father_name"><b>Father's Name  </label> </td>
+               
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp;  {{formfathername}}
+                </td>
+        </tr>
+
+        <tr>
+                <td height="10%" width="20%"> <label for="userdob"><b>Date of Birth  </label> </td>
+                
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp;  {{formdob}}
+                </td>
+        </tr>
+
+        <tr>
+                <td height="10%" width="20%"> <label for="userseqretq"><b>Secret Question</b>  </label> 
+                <br> <i> {{formsecretq}}</i></td>
+               
+                <td height="100%" width="auto">
+                     <br>    &nbsp; &nbsp; {{formsecreta}}
+                </td>
+        </tr>
+
+        <tr>
+                <td height="10%" width="20%"> <label for="userphone"><b>Phone  </label> </td>
+                
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp;  {{formphone}}
+                </td>
+        </tr>
+        <tr>
+                <td height="10%" width="20%">  <label for="useremail"><b>Email  </label> </td>
+               
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp; {{formemail}} 
+                      
+                </td>
+        </tr>
+
+        <tr>
+                <td colspan="3" style="background-color: grey; color: white;" height="10%"><label for="name"> 
+                <center>  </center> </label> </td>
+
+        </tr> 
+
+
+          </table>
+       </fieldset><br><br> 
+         
+    </form>
+
+<button class="print" type="" name="print" value="Print"> Print</button>
+&nbsp; &nbsp;
+<button class="download" type="" name="download" value="Download"> Download </button>
+
+</center>
+</div>
+
+{% endblock %}

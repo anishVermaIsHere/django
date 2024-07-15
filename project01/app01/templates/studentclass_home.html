@@ -1,0 +1,157 @@
+{% extends "studentclass_masterpage.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+
+.home-cont2, .home-cont1 { background-color: white; height: auto; color:black; }
+
+.home-cont1-flex { background-color: white; display: flex; }
+.item1 { width: 800px; margin: 0px; padding-top: 20px; }
+.item2 { width: 600px; margin: 0px; padding: 20px; }
+
+.flex-container { display: flex; justify-content: center; background-color: skyblue; flex-flow: row wrap; padding: 50px;}
+
+.item { font: 22px Tw Cen MT; height: 130px; width: 200px; margin: 50px 0px 50px 0px; 
+         margin: 40px 20px 0px 20px; padding: 40px; align-content: center; background-color: #bee5f4; /*#e0ebeb; #b3e6ff; #0C4182; #0A2F6B; #ccddff;*/ 
+        transition: box-shadow .3s; border-radius: 6px; text-align: center; transition: background-color 2s; }
+
+a { text-decoration: none; }
+
+.item p { font-size: 16px; align-items: center; color: black; margin: 20px 0px 20px 0px; } 
+
+.item:hover { box-shadow: 0 0 30px #2196c4; background-color: #ffff; transition: background-color 2s;}
+
+.item-head { color: #3385ff;  }
+
+.head1 { font: 80px Tw Cen MT; color: black; padding: 0 0 0 50px;}
+
+.headpara { font: 30px Tw Cen MT; color: black; padding: 0 0 0 50px;}
+
+.img2 { float: right; padding: 20px; max-height: 550px; max-width: 700px; }
+
+.head2 { font: 40px Tw Cen MT;  color: black; padding: 20px 0px 5px 20px;}
+
+.underline { margin: 15px 0px 0px 0px; }
+
+.item-para { color:#001433; font-size: 15px; }
+
+.item4 { height: 100px; width: 200px; margin: 50px; background-color: #b3e6ff; #0C4182; #0A2F6B; #ccddff;  
+        border: 1px solid #00aaff; border-radius: 6px; text-align: center; padding: 50px 20px 50px 20px;
+        order: 4; background: url({% static "img/contactimg.png" %}) 100% 0 no-repeat fixed; }
+
+.card-img { height: 80px; width: 100px; padding: 5px 0px 5px 0px; }
+
+
+
+</style>
+
+        <div class="img-cont">
+
+        <!--https://source.unsplash.com/collection/190727/1305x200-->
+          <img src ="{% static 'img/6663.svg' %}" alt="student cover" height="300" width="50%">
+
+         
+        </div>
+
+        <div class="cont-head">
+
+                <div class="home-cont1">
+                        <div class="home-cont1-flex">
+                                <div class="item1">
+                                        <h2 class="head1"> Learn Without Limits</h2>
+                                        <p class="headpara"> Take the next step in your career with <br>
+                                        a world class learning experience.</p>
+                                </div>
+
+                                <div class="item2">
+                                        <img src ="{% static 'img/homeimg.svg' %}" class="img2">
+                                </div>
+
+                        </div>
+                </div>
+ 
+            	<div class="home-cont2">
+                              
+                        <h2 class="head2"><u class="underline">Our Services</u></h2>
+                                                    
+                    		<div class="flex-container">
+
+                                        <a href="books" alt="Books">
+                                                <div class="item" title="e-Books"> 
+                                                        <img src="{% static 'img/ebooks.png' %}" class="card-img">
+                                                        <div class="item-head">
+                                                        e-Books
+                                                <div class="item-para"> Download e-books and more study materials
+                                                </div> 
+                                                        </div>
+                                                </div>
+                                        </a>
+
+                                        <a href="classes" alt="Classes">
+                                                <div class="item"  title="Classes"> 
+                                                        <img src="{% static 'img/classes.svg' %}" class="card-img">
+                                                        <div class="item-head">
+                                                        Online Classes 
+                                                <div class="item-para"> More Live classes with downloads</div>
+                                                        </div>
+                                                </div>
+                                        </a>
+
+                                        <a href="practice" alt="Practice">
+                                                <div class="item"  title="Practice"> 
+                                                        <img src="{% static 'img/practice.svg' %}" class="card-img">
+                                                        <div class="item-head">
+                                                        Practice
+                                                        <div class="item-para"> Give Mocks with more Test Series  </div>
+                                                        </div>
+                                                </div>
+                                        </a>
+
+                                        <a href="books" alt="Books">
+                                                <div class="item"> 
+                                                
+                                                </div>
+                                        </a>
+
+                                        <a href="books" alt="Books">
+                                                <div class="item"> 
+                                                
+                                                </div>
+                                        </a>
+
+                                        <a href="books" alt="Books">
+                                                <div class="item"> 
+                                                
+                                                </div>
+                                        </a>
+
+                                        <a href="books" alt="Books">
+                                                <div class="item"> 
+                                                
+                                                </div>
+                                        </a>
+
+                                        <a href="books" alt="Books">
+                                                <div class="item"> 
+                                                
+                                                </div>
+                                        </a>
+
+                                        <a href="books" alt="Books">
+                                                <div class="item"> 
+                                                
+                                                </div>
+                                        </a>
+
+
+                    		</div>
+           	</div>
+
+        </div>
+
+       
+
+  {% endblock %} 

@@ -1,0 +1,108 @@
+{% load static %}
+
+<html>
+<head>
+        <title> User Information  </title>
+        <style>
+        
+        body {background-color: #0a0f0f;  font-family: Helvetica;}
+        
+        .div1 {color: #94b8b8; font-family: STAMPETE; background: url({% static "img/keyboard-background.jpg" %}) 50% 0 no-repeat fixed; font-size: 40px;}
+        
+       
+        .div2{ height: 100%; color: #94b8b8; background: url({% static "img/keyboard-background.jpg" %}) 50% 0 no-repeat fixed; background-color: #0a0f0f;}
+
+        table {color: #94b8b8;}
+
+        fieldset { background-color: #0a0f0f; border:3px solid #94b8b8; -moz-border-radius:8px;
+                  -webkit-border-radius:8px; border-radius:8px; max-width:250px; padding:36px;  }
+         
+
+        .footer  {color: #94b8b8;  border: 5px solid #0a0f0f; background-color: #0a0f0f; text-align:center;}
+
+        .button { border: 1px solid white; border-radius:18px; background-color: #0a0f0f; 
+                  color: white; padding: 5px 10px; text-align: center; text-decoration: 
+                  none; display: inline-block; font-size: 12px; width: auto; margin: 4px 2px; cursor: pointer;
+                }
+                
+        .button:hover {background-color: #94b8b8; color: black;}
+        
+        </style>
+</head>
+
+<body>
+
+<div class="div1">
+Hello User
+
+</div>
+
+<center>
+
+
+<div class="div2">
+    
+   
+       <fieldset>
+          <legend><strong> User Information </strong><br><br></legend>
+        <table border=0px height="auto" width="auto">
+
+        <tr>
+                <td  height="10%" width="20%"> <label for="username">Name  </label> </td>
+                <td> : </td>
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp;  {{formname | capfirst }} 
+                </td>
+        </tr>
+
+        <tr>
+                <td  height="10%" width="20%"> <label for="usersex">Sex  </label> </td>
+                <td> : </td>
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp;  {{formsex | capfirst}} 
+                </td>
+        </tr>
+
+        <tr>
+                <td height="10%" width="20%"> <label for="userphone">Phone  </label> </td>
+                <td> : </td>
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp;  {{formphone}}
+                </td>
+        </tr>
+        <tr>
+                <td height="10%" width="20%">  <label for="useremail">Email  </label> </td>
+                <td> : </td>
+                <td height="100%" width="auto">
+                      &nbsp; &nbsp; {{formemail}} 
+                      
+                </td>
+        </tr>
+          
+          </table>
+       </fieldset><br><br> 
+         
+    </form>
+
+<button class="button" type="" name="print" value="Print"> Print</button>
+&nbsp; &nbsp;
+<button class="button" type="" name="download" value="Download"> Download </button>
+
+</center>
+</div>
+
+
+<footer>
+    <div class="footer">
+          <p color= "#94b8b8" style="font-size: 22px; font-family:'STAMPETE'"> Hello User </p>
+          <p style="font-size: 12px"> This Web page is designed by Anish
+            <br> &copy; 2020-2021 Hello User. All Rights Reserved. </p>
+    </div>
+</footer>
+
+
+
+
+</body>
+
+</html>

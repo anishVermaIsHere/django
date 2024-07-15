@@ -1,0 +1,31 @@
+﻿{%load static %}
+<!DOCTYPE html>
+
+<head runat="server">
+     <title>Login Superman vs Batman</title>
+    <link href="{% static 'css/prac02.css'%}" rel="stylesheet" type="text/css"/> 
+</head>
+<body>
+        <center>
+             <div>                 
+                  <form id="form1" runat="server" border="1"> 
+                   <h2> </h2>
+               
+               <center>  
+                  
+                   <image src = "{%static 'img/bs.jpg'%}" ID="Img1" runat="server" Height="100px" Width="150px"></Image> <br>
+               Name: <input type="TextBox" ID="TB1" runat="server" Text=""></TextBox> <br><br>
+                Phone: <input type="TextBox" ID="TB2" runat="server"></TextBox> <br><br>
+               <button type="Button" ID="Bt1" runat="server" Class="button" OnClick="Bt1_Click" />Login</button></center> <br><br>
+                  
+                <Label ID="Lb1" runat="server" Text=""></Label>
+                </form>
+
+            
+            </div>
+
+                 </center>
+        
+
+</body>
+</html>

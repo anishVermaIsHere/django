@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+/*  .imgcontainer { text-align: center; margin: 24px 0 12px 0; position: relative; }
+
+   img.avatar { width: 50%; border-radius: 50%; }
+*/
+    .body-cont { font-family: 'Quicksand', sans-serif; background-image: linear-gradient(#4080bf, #b3cce6); }
+
+    .cont { height: 100%; width: auto; text-align: center; padding-top: 150px; color: white;
+            margin: 100px; background: url("../img/desk-lamp-for-home-office.jpg") 50% 0 no-repeat ;   /*background-image: linear-gradient(skyblue, #b3cccc);*/ }*/
+    h2 { font-size: 45px; }
+    p { font-size: 30px;}             
+    /*.login, .register { border: 1px solid #034A25; margin-top: 15px; background-image: linear-gradient(#3d5c5c, #141f1f); 
+            color: white; padding: 5px 10px; text-align: center; font-size: 16px; height: 30px; width: 100px; }
+
+    .login:hover, .register:hover { background-image: linear-gradient(#b3cccc, #476b6b); color: white; }*/
+
+    .menu {background-image: linear-gradient(#264d73, #0d1a26); margin: 10px 30px; padding: 0px; }
+    
+    .logo {list-style: none; overflow: hidden; padding: 5px 10px 10px 10px; margin:0; float: left;  }
+
+    .logo a {font-size: 22px; text-decoration: none; display:inline-block; text-align: center; padding: 10px; color: white; }
+
+    .menu-list {list-style: none; overflow: hidden; padding: 0; margin:0; }
+    .menu-list li { float: right; }
+    .menu-list li a { cursor: pointer; color: white; display:inline-block; text-align: center; text-decoration: none; padding: 20px 30px; }
+    .menu-list li a:hover { background-image: linear-gradient(#3973ac, #204060); color: white; }
+
+    .dropdown-menu { padding: 3px; background-color: #ecf2f9; border: 1px solid white; height: auto; border-radius: 6px; display:none; position: absolute; z-index: 1; min-width: 100px;}
+    .dropdown-menu li { margin: 0px; background-color: #ecf2f9; display: block; float: none;  border-bottom: 1px solid #a3c2c2;}
+    .dropdown-menu li a { font-size: 14px;text-align: left; color: black; display: block; padding: 10px 20px; }
+    .dropdown-menu li a:hover { background-image: linear-gradient(#6699cc, #8cb3d9); transition: all 1s;}
+    .menu-list li:hover .dropdown-menu { display:block; 
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in; }
+    .dropdown-menu a:hover .dropdown-menu {background-color: #ddd;}
+ 
+   
+    

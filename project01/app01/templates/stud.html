@@ -1,0 +1,155 @@
+
+{% load static %}
+
+<html>
+
+<head>
+    <i>Practice Page 1</i>
+    <title>Django Web Development: Practice Page 1</title>
+    <style>
+        body {background-color: white; #9392F7; font-family: Helvetica;}
+
+        .header {font-family: Tw Cen MT; background-color: #188461; margin-top:20px; margin-left:100px; 
+        margin-right:100px; margin-bottom:20px;}
+       
+        .div1, .div2, .div3 , .div4 {background-color: #188461; margin-left:100px; margin-right:100px; 
+                                    margin-top:20px; margin-bottom:20px;}
+
+        .div1, .div2, .div3 {background-color: #24c290; margin-left:100px; margin-right:100px; 
+        margin-top:20px; margin-bottom:20px;}
+
+        .container { padding: 20px 0px 20px 0px; }
+
+        .field1 { border:3px solid green; -moz-border-radius:8px;
+                  -webkit-border-radius:8px; border-radius:8px; max-width:390px; padding:36px;	}
+
+        .field2 { border:3px solid green; -moz-border-radius:8px;
+                  -webkit-border-radius:8px; border-radius:8px; max-width:250px; padding:36px;	}
+        legend { margin-bottom:0px; margin-left:16px; }
+
+        footer {font-size:15px; background-color: #188461; margin-left:100px; margin-right:100px; }
+
+        table {background-color: #d9f2e6;}
+    </style>
+
+</head>
+
+<div class="header">
+            <h1> <span style="color:#00e68a;font-family:Cambria"> django <span style="color:white; font-size:20"> Web Development</span>  </h1>
+
+</div>
+
+<body>
+
+<div class="div1">
+            <h3>Hello user, this is a django project</h3>
+</div>
+
+<center>
+
+<!-- First Table-->
+
+<div class="div2">
+
+    <div class="container">
+                <table border="0">
+                <h3>This data is fetched from Student_Table </h3>
+                        <tr style="background-color: #3ddba9;">  
+                            <th width="70px"> <b> Id </th> 
+                            <th width="70px"> <b> Name </th>
+                            <th width="70px"> <b> Enrolment </th>
+                            <th width="70px"> <b> Age </th>
+                            <th width="70px"> <b> Course</th>
+                            <th width="70px"> <b> Email  </th>
+
+                        </tr>
+
+                            {% for x in stud %}
+                        <tr style="text-align: center;">        
+                                
+                            <td>{{x.id}} </td>
+
+                            <td>{{x.name}} </td>
+
+                            <td>{{x.enrol}} </td>
+
+                            <td>{{x.age}} </td>
+
+                            <td>{{x.course}} </td>
+
+                            <td>{{x.email}} </td>   
+
+                        </tr> 
+
+                            {% endfor %}  
+                        <tr>
+
+                        </tr>
+
+                </table>
+
+        </div>
+</div>
+
+<div class="div3">
+
+    <div class="container">
+            <table border="0">
+                <h3>This data is fetched from New_Student_Table </h3>
+                        <tr style="background-color: #3ddba9;">        
+                            <th width="70px"> <b> Id </th> 
+                            <th width="70px"> <b> Name </th>
+                            <th width="70px"> <b> Enrolment </th>
+                            <th width="70px"> <b> Age </th>
+                            <th width="70px"> <b> Course</th>
+                            <th width="70px"> <b> Email  </th>
+
+                        </tr>
+
+                            {% for x in newstud %}
+                        <tr style="text-align: center;">        
+                                
+                             <td>{{x.id}} </td>
+
+                            <td>{{x.name}} </td>
+
+                            <td>{{x.enrol}} </td>
+
+                            <td>{{x.age}} </td>
+
+                            <td>{{x.course}} </td>
+
+                            <td>{{x.email}} </td>    
+                       
+                        </tr> 
+
+                            {% endfor %}     
+                        <tr>
+
+                        </tr>
+
+                </table>
+    </div>
+</div>
+
+</center>
+
+<footer>
+        <nav aria-label=""> 
+            <ul>
+                <li>
+                    <p>&#169; Anish 2021<br>
+                </li>
+
+                <li>
+                    anish@djangowebdev.com </p>
+                </li>
+            </ul>
+        </nav>
+
+</footer>
+
+</body>
+
+</html>
+

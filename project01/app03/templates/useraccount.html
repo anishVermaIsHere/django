@@ -1,0 +1,61 @@
+
+{% load static %}
+
+
+<html>
+<head>
+  
+    <title>{% block title%} {{user.first_name | capfirst }} {% endblock title %} |  Skymax</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/useraccount.css" %}">
+</head>
+
+<body class="body-cont">
+            <div class="menu">
+                <nav>
+                    <ul class="logo">
+                        <a href="/">Skymax</a>
+                    </ul>
+
+                    <ul class="menu-list">
+                        {% if user.is_authenticated %}
+
+
+                                <li> <a id="user-name"> {{user.first_name | capfirst}} </a>  
+
+                                    <ul class="dropdown-menu">
+                                        <li> <a href="editprofile">Edit profile</a> </li>
+                                        <li> <a href="usersettings">Settings</a> </li>
+                                        <li> <a href="logout">Logout</a> </li>
+                                    </ul>
+                                </li>
+                                <li> <a href="register" title="Register">Register</a></li>
+                                <li> <a href="contactus" title="Contact">Contact</a></li>
+                                <li> <a href="aboutus" title="About us">About us</a></li>
+
+                         <li> <a href="services">Services</a>
+                            <ul class="dropdown-menu">
+                                            <li> <a href="#">Banking</a> </li>
+                                            <li> <a href="#">Accounting</a> </li>
+                                            <li> <a href="#">Product Selling</a> </li>
+                            </ul>
+                        </li>
+                        {% endif %}
+
+                    </ul>
+                </nav>
+            </div>
+
+{% block content %}
+
+        <div class="cont">
+            <h2> Welcome, {{user.first_name | capfirst}} </h2>
+            <p>There is no solitude in the world like that of the big city.</p>
+
+        </div>
+{% endblock %} 
+ 
+</body>
+
+
+</html>
+

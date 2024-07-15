@@ -1,0 +1,268 @@
+
+{% extends "studentclass_masterpage.html" %}
+
+{% load static %}
+{% block title%} Student Register |
+{% endblock title %}
+{% block content %}
+
+   
+    </script>
+<style type="text/css">
+
+        .container {border-color: white; background-color: #0C4182; color: white; border: 2px solid red; #0A2F6B; font-family: Letter Gothic Std; height: 80px; }
+
+       .container-head { display: flex; justify-content: center; font-family: Letter Gothic Std; font-size: 16px; text-align: center; padding: 20px 20px 20px 20px; 
+            background: url({% static "img/6663.svg" %}) no-repeat fixed center;}
+
+        .field { line-height: 50px; font: 22px Tahoma; border:1px solid /*#ECF0F1*/ #d1e0e0;
+             -moz-border-radius:8px; color: black; background-color: white; border-radius:8px; 
+             height: 400px; max-width:300px; padding:36px; 
+             box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
+            }
+         h5 {text-align: center; font-size: 20px; margin-top: 5px;}
+
+        .imgcontainer { text-align: center; margin: 24px 0 12px 0; position: relative; }
+
+        img.avatar { width: 60%; border-radius: 50%; }
+
+        .buttoncontainer {padding: 30px 0px;}
+
+       .text-cont { padding: 2px 10px; font-size: 16px; border: 2px solid black; height: 40px; width: 300px; }
+
+       /*.text-cont-div, .button-cont { height: 40px; width: 300px;}*/
+        
+        .submit{ border: 1px solid #034A25; margin-top: 15px; background-color: #06AA55; 
+            color: white; padding: 5px 10px; text-align: center; font-size: 16px; 
+            height: 40px; width: 300px; }
+
+        .submit:hover { background-color: #034A25; color: white; }
+
+        .cancel { border: 1px solid #4d0000; background-color: #b30000; 
+            color: white; padding: 5px 10px; text-align: center; font-size: 16px; 
+            height: 40px; width: 300px;}
+
+        .cancel:hover {background-color: #4d0000; color: white;}
+
+
+   </style>
+
+
+                                <!-- Student Registration Form -->
+
+
+        <div class="container-head"><center>
+            <form action="studentregister_details" onsubmit="return(validate());" method="post" target="_blank" id="button" name="userinfo">
+                {% csrf_token %}
+                    <div class="field">
+                        <h5> Student Register </h5>
+
+                        <div class="imgcontainer">
+                        <img src ="{% static 'img/student-reg.svg' %}" alt="Avatar" class="avatar"/>
+                        </div>
+
+                        <div class="buttoncontainer">
+                            <input class="text-cont" type="text" name="name" placeholder="Phone or Email">  
+                        
+                            <button class="submit" onclick name="submit" form="button"> Next </button>
+                        </div>
+        
+                       <!-- <div class="button-cont">
+                                <button class="cancel" type="submit" value="cancel" form="button"> 
+                                    Cancel </button>  
+                        -->
+                    </div>
+                     
+            </form>
+
+        </div>
+
+        
+                    <!--
+                            <tr>
+                                <td height="10%"><label for="usersex"> Sex <b>*</b> </label> </td>
+                      
+                                <td>    
+                                        <select id="sex" name="sex"> 
+                                                <option value=""> -- Select --</option>
+                                                <option value="male">   Male   </option>
+                                                <option value="female">   Female   </option>
+                                        </select> 
+                                </td>
+                            </tr>
+
+                            <tr>  
+                                <td  height="10%">  <label for="father_name">Father's Name <b>*</b> </label>  </td>
+                      
+                                <td>  
+                                    <input type="text" name="father_name" placeholder="Enter the father's name">  
+                                </td>
+                            
+                            </tr>
+                      
+                            <tr>
+                                <td  height="10%">  <label for="userdob">Date of Birth <b>*</b> </label>  </td>
+
+                                <td>  <input type="date" name="dob"  placeholder="Enter the date of birth">  </td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td  height="10%">  <label for="userphone"> Phone  <b>*</b> </label>  </td> 
+
+                                <td>  <input type="number" name="phone"  placeholder="Enter the phone">  </td>
+
+                            </tr>
+
+                            <tr>
+                                <td  height="10%">  <label for="useremail">Email  <b>*</b> </label>  </td>
+
+                                <td>  <input type="text" name="email"  placeholder="Enter the email">  </td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td colspan="2" style="background-color: grey; color: white;" height="10%"><label for="name"> 
+                                    <center> User Details </center> </label> </td>
+                            </tr> 
+
+                             <tr>
+
+                                <td  height="10%">  <label for="usersecretq"> Secret Question </label><br> 
+                                
+                                <select id="secretq" class="secretq" name="secretq"> 
+                                        <option value="">  -- Choose your question -- </option>
+                                        <option value="Which is your favourite food?">   Which is your favourite food?   </option>
+                                        <option value="What is your friend's name?">  What is your friend's name?  </option>
+                                        <option value="Which is your favourite destination? ">  Which is your favourite destination?  </option>
+                                </select> 
+
+                                 </td>
+
+                                <td>  <input type="text" name="secreta" placeholder="Enter the answer">  </td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td  height="10%">  <label for="username">Username <b>*</b> </label>  </td>
+
+                                <td>  <input type="text" name="username"  placeholder="Type your username">  </td>
+
+                            </tr>
+
+                            <tr>
+                                <td  height="10%">  <label for="userpassword">Password <b>*</b> </label>  </td>
+
+                                <td>  <input type="password" name="password1" minlength="5" maxlength="20"placeholder="Type your password">  </td>
+
+                            </tr>
+
+                             <tr>
+                                <td  height="10%">  <label for="userpassword">Repeat Password <b>*</b> </label>  </td>
+
+                                <td>  <input type="password" name="password2" minlength="5" maxlength="20" placeholder="Type your password again">  </td>
+
+                            </tr>
+
+
+                          </table>
+
+                    -->
+
+     {% endblock %}                  
+              
+        <script type="text/javascript">
+            
+
+
+        function validate()
+            {
+
+                    if (document.userinfo.name.value== "") 
+                    {
+                        alert("Please enter the phone or email");
+                        document.userinfo.name.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.sex.value== "") 
+                    {
+                        alert("Please select your Sex");
+                        document.userinfo.sex.focus();
+                        return false;
+                    }
+
+                      if (document.userinfo.dob.value== "") 
+                    {
+                        alert("Please select your Date of Birth");
+                        document.userinfo.dob.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.phone.value== "") 
+                    {
+                        alert("Please enter your phone number");
+                        document.userinfo.phone.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.email.value== "") 
+                    {
+                        alert("Please enter your email id");
+                        document.userinfo.email.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.username.value== "") 
+                    {
+                        alert("Please enter the username");
+                        document.userinfo.username.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.password1.value== "") 
+                    {
+                        alert("Please enter the password");
+                        document.userinfo.password1.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.password2.value== "") 
+                    {
+                        alert("Please enter repeat password ");
+                        document.userinfo.password2.focus();
+                        return false;
+                    }
+                    
+
+
+            }
+
+        function validateEmail() 
+            {
+                var emailID = document.userinfo.email.value;
+                atpos = emailID.indexOf("@");
+                dotpos = emailID.lastIndexOf(".");
+         
+                    if (atpos < 1 || ( dotpos - atpos < 2 )) 
+                    {
+                        alert("Please add @")
+                        document.userinfo.email.focus();
+                        return false;
+                    }
+                return( true );
+            }
+        
+            // Get the modal
+                var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                        }
+                    }
+

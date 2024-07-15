@@ -1,0 +1,65 @@
+{% extends 'sampleformhome.html'%}
+{% load static %}
+{% block title%} Services |
+{% endblock title %}
+
+{% block content %}
+
+
+    <style>
+            https://source.unsplash.com/user/erondu/1600x900
+
+            img { height: 300px; min-width: 100%;  }
+
+            .body-container { display: flex; justify-content: center; height: 100%;  padding: 30px; 
+            margin: 100px; background: url({% static "img/servicesbackg.png" %}) 50% 0 no-repeat; border: 1px solid red; }
+
+            .flex-container { display: flex; justify-content: center; height: 50%; width: 100%;  padding: 30px; flex-flow: row wrap; margin-top: 120px;
+            background: url({% static "img/servicesbackg.png" %}) 50% 0 no-repeat; border: 1px solid red; }
+
+            .cards { height: 130px; width: 180px; margin: 10px 10px; color: white; text-align: center;
+         padding-top: 40px; align-content: center; background-color: #334d4d; 
+        transition: box-shadow .3s; border-radius: 6px; text-align: center; }
+
+
+            h1 {color: white;font-size: 35px;}
+    </style>
+
+<body>
+    
+        <div class="body-container">
+
+            <h1> Our Services </h1>
+
+                <div class="flex-container">   
+                    <div class="cards">
+
+                        <h2> Banking </h2>
+
+                    </div>
+
+                    <div class="cards">
+
+                        <h2> Accounting </h2>
+
+                    </div>
+
+                    <div class="cards">
+
+                        <h2> Product Selling </h2>
+
+                    </div>
+
+                    <div class="cards">
+
+                        <h2> Banking </h2>
+
+                    </div>
+
+                </div>
+
+        </div>
+ 
+</body>
+
+ {% endblock %}  

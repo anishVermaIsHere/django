@@ -1,0 +1,217 @@
+{% load static %}
+
+<html>
+
+<head>
+
+<title>Hello User</title>
+    <script type="text/javascript">
+            
+        function validate()
+            {
+
+                    if (document.userinfo.name.value== "") 
+                    {
+                        alert("Please enter your Name");
+                        document.userinfo.name.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.sex.value== "") 
+                    {
+                        alert("Please select your Sex");
+                        document.userinfo.sex.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.phone.value== "") 
+                    {
+                        alert("Please enter your phone number");
+                        document.userinfo.phone.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.email.value== "") 
+                    {
+                        alert("Please enter your email id");
+                        document.userinfo.email.focus();
+                        return false;
+                    }
+
+
+            }
+
+        function validateEmail() 
+            {
+                var emailID = document.userinfo.email.value;
+                atpos = emailID.indexOf("@");
+                dotpos = emailID.lastIndexOf(".");
+         
+                    if (atpos < 1 || ( dotpos - atpos < 2 )) 
+                    {
+                        alert("Please add @")
+                        document.userinfo.email.focus();
+                        return false;
+                    }
+                return( true );
+            }
+        
+    </script>
+
+    <style>
+        body {background-color: #0a0f0f;  font-family: Helvetica;}
+        
+        .footer  {color: #94b8b8;  border: 5px solid #0a0f0f; background-color: #0a0f0f; text-align:center;}
+
+        .div1 {color: #94b8b8; font-family: STAMPETE; background: url({% static "img/keyboard-background.jpg" %}) 50% 0 no-repeat fixed; font-size: 40px; margin-top:0px; margin-bottom:0px;}
+        
+        .div2, .div3, .div4 { color: #94b8b8; background: url({% static "img/keyboard-background.jpg" %}) 50% 0 no-repeat fixed; background-color: #0a0f0f;}
+        
+        .field1 { background-color: #0a0f0f; border:3px solid #94b8b8; -moz-border-radius:8px;
+                -webkit-border-radius:8px; border-radius:8px; max-width:500px; padding:36px;	}
+
+        .field2 { background-color: #0a0f0f; border:3px solid #94b8b8; -moz-border-radius:8px;
+                  -webkit-border-radius:8px; border-radius:8px; max-width:250px; padding:36px;	}
+        
+        legend { margin-bottom:0px; margin-left:16px; }
+        
+        table {color: #94b8b8;}
+        
+        .button { border: 1px solid white; border-radius:18px; background-color: #0a0f0f; color: white; padding: 5px 10px;
+                  text-align: center; text-decoration: none; display: inline-block;
+                  font-size: 12px; width: auto; margin: 4px 2px; cursor: pointer;
+                }
+
+        .button:hover {background-color: #94b8b8; color: black;}
+
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="div1">
+Hello User
+        
+</div>
+                                <!-- First Form | Enter the numbers for addition by click on Add -->
+<center>
+
+<div class="div2"> 
+<form action="test">
+{% csrf_token %}
+
+<fieldset class="field1">
+            <legend>    <strong>Enter the numbers for addition by click on Add</strong> </legend>
+                                        <br>
+                            <input type="text" name="num1"  placeholder="Enter first number">  + <input type="text" name="num2"  placeholder="Enter second number"> =
+                            <label for="result"> {{sum}}</label>
+                                        <center><br>
+
+                            <button class="button" type="submit" value="submit" form="button"> Add </button>
+                            &nbsp; &nbsp;
+                            <button class="button" type="reset" value="Reset"> Reset </button>
+</fieldset>
+
+</form>
+
+</div>
+
+                                <!-- Second Form | Enter the numbers for addition by automatic -->
+
+<div class="div3">
+
+<form oninput="res.value=parseInt(num1.value)+parseInt(num2.value);">
+{% csrf_token %}
+
+<fieldset class="field1">
+        <legend>    <strong>Enter the numbers for addition by automatic</strong>    </legend>
+                                <br>
+                        <input type="number" name="num1" placeholder="Enter first number">  + <input type="number" name="num2" placeholder="Enter first number"> = 
+                        <output name="res" value=""> </output>
+                                <center> <br>
+  
+</fieldset>
+
+</form>
+
+</div>
+
+                                <!-- Third Form | User Information Form -->
+
+<div class="div4" width="300px" height="180px">
+    <form action="user_details" onsubmit="return(validate());" method="post" target="_blank" id="button" name="userinfo">
+    {% csrf_token %}
+       <fieldset class="field2">
+          <legend><strong> User Information Form</strong><br></legend>
+            
+            <table  border="0" height="40%" width="100%">
+                <tr>
+                    <td height="10%"><label for="username">Name: </label> </td>
+          
+                    <td>    <input type="text" name="name" placeholder="Enter the name"> </td>
+                </tr>
+
+                <tr>
+                    <td height="10%"><label for="usersex"> Sex: </label> </td>
+          
+                    <td>    
+                            <select id="sex" name="sex"> 
+                                    <option value="male">   Male   </option>
+                                    <option value="female">   Female   </option>
+                            </select> 
+                    </td>
+                </tr>
+
+                <tr>  
+                    <td  height="10%">  <label for="userphone">Phone: </label>  </td>
+          
+                    <td>  
+                        <input type="phone" name="phone"  placeholder="Enter the phone no.">  
+                    </td>
+                
+                </tr>
+          
+                <tr>
+                    <td  height="10%">  <label for="useremail">Email: </label>  </td>
+
+                    <td>  <input type="email" name="email"  placeholder="Enter the email">  </td>
+
+                </tr>
+                                    
+                <tr>  
+                  
+                    <td  height="10%" colspan=2 align="center">  
+                        
+                        <button class="button" type="submit" value="submit" form="button"> Submit </button>
+
+                    </td>
+                </tr>
+
+              </table>
+          
+       </fieldset>
+         
+    </form>
+
+  </div>
+</center>
+
+<footer>
+    <div class="footer">
+         <p color= "#94b8b8" style="font-size: 22px; font-family:'STAMPETE'"> Hello User </p>
+          <p style="font-size: 12px"> This Web page is designed by Anish
+            <br> &copy; 2020-2021 Hello User. All Rights Reserved. </p>
+
+    </div>
+</footer>
+
+
+
+</body>
+
+
+
+</html>
+

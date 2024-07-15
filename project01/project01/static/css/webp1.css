@@ -1,0 +1,69 @@
+body {
+    font-family: 'Tw Cen MT';
+    background-color: #414142;
+    
+}
+
+h1 {
+    color:white;
+    background-color: #2b2626;
+    
+}
+
+h3 {
+    color:white;
+    font-size:20px;
+
+}
+
+i {
+    color:red;
+}
+
+.nav {
+    float:right;
+    display:inline-block;
+}
+.but1, .but2 {
+    background-color: #1F618D;
+    font-family:'Tw Cen MT';
+    padding: 5px 14px;
+    font-size: 14px;
+    color:white;
+
+}
+
+.but1:hover, .but2:hover {
+    background-color: #85C1E9;
+    
+}
+
+
+.div1 {   font-size:14px;
+        background-color:#2b2626;
+        padding:0px;
+        margin-bottom:0px;
+        margin-top:0px;
+        margin-left:70px;
+        margin-right:70px;
+
+ }
+
+
+.tb1 {
+    background-color:#2b2626;
+    color:white;
+    text-align:right;
+    border-color:1px solid white;
+    font-size:18px;
+}
+
+.tb2 {   
+    background-color:rgba(255, 255, 255, 0.857);
+    border:1px solid black;
+    font-size:16px;
+    margin: 10px;
+    padding: 10px;
+    width:500px;
+
+}

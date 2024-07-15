@@ -1,0 +1,151 @@
+{% load static %}
+
+
+
+<html>
+<head> <title> {% block title %} {% endblock title %} STUDY Here </title>
+
+    <link rel="stylesheet" href="{% static 'css/studentmaster.css' %}" type="text/css"/>
+    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">-->
+        
+</head>
+
+<body>                      
+                                <!-- Header of the page -->
+<div class="div1">
+        <div class="top1">
+        <nav class="nav">  
+
+                  <a class="contact" href="contact-us">Contact </a> &nbsp;
+        <a class="login" href="/login" role="button" onclick="document.getElementById('id01').style.display='block'">Login</a> &nbsp;
+                  <a href="/register" role="button"class="register" onclick="/register">Register </a>  &nbsp;  
+                  
+                  <input type="text" placeholder="Search..."  class="search" name="searchbar">    
+                  <button type="submit" name="searchbut" value=""></button> 
+                                   
+                <!--<form class="example" action="_______" style="width:150px">
+                                <input type="text" placeholder="Search.." name="search2">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                -->
+                    
+        </nav>
+        </div>
+
+
+        <div class="top2">
+              <div class="main-tab"> 
+ 
+                        <ul class="title">
+                                <a href="/" rel="">STUDY Here</a>
+                                
+                        </ul>
+
+                    <ul class="dropdown"> 
+                        <a href=""> SUPPORT</a> 
+                            <div class="support">
+                                <a href="#">Student Grievances</a>
+                                
+                            </div>
+                                
+                    </ul>
+                 
+
+                    <ul class="dropdown">
+                         <a href="">STUDENT ZONE</a>
+                            <div class="studzone">
+                                <a href="#">Courses</a>
+                                <a href="#">Subjects</a>
+                                <a href="#">Assignments</a>
+                                <a href="#">Results</a>
+                            </div>
+                                
+                    </ul>
+                       
+                    <ul class="dropdown">
+                        
+                            <a href="">SCHOOL </a> 
+                        <div class="second-content">
+                                <a href="#">Secondary</a>
+                                <ul class="dropdown-menu"> 
+                                    <li>  <a href="#">Class 6</a></li> 
+                                    <li>  <a href="#">Class 7</a></li> 
+                                    <li>  <a href="#">Class 8</a></li> 
+                                </ul>
+                                
+                                <a href="#">Higher Secondary</a>
+                                <ul class="dropdown-menu">  
+                                    <li>  <a href="#">Class 9</a></li>
+                                    <li>  <a href="#">Class 10</a></li>
+                                    <li> <a href="#">Arts</a></li>
+                                    <li> <a href="#">Commerce</a></li>
+                                    <li> <a href="#">Science</a></li>
+                                    <li>  <a href="#">Vocational</a></li> 
+                                </ul>
+
+                        </div>
+                        
+                    </ul>               
+              
+
+              <ul class="dropdown">
+                        <a href="" class="dropbtn">ACADEMICS</a> 
+                          
+                        <div class="acad-content">
+                            <a href="#">Bachelors</a>
+                            <a href="#">Masters</a>
+                            <a href="#">Other Courses</a>
+                            
+                        </div>
+
+              </ul>
+
+               <ul class="dropdown">
+                         
+                <a href="about-us">ABOUT US</a> 
+                        <div class="about-content">
+                            <a href="#">About the platform</a>
+                            <a href="#">Faculties</a>
+                            
+                        </div>
+               </ul> 
+
+        </div>
+</div>                   
+
+{% block content %}
+ {% endblock %}   
+
+ <div class="footer">
+  <h2>Connect with us</h2>
+<ul class="social">
+
+    <li><a class="youtube" href="http://www.youtube.com/studentclass"><img class="connect" src="/static/img/youtube.jpg" alt="Youtube" /> </a></li>
+    <li><a class="facebook" href="https://www.facebook.com/studentclass"><img class="connect" src="/static/img/fb.png" alt="Facebook" /> </a></li>
+    <li><a class="twitter" href="https://twitter.com/studentclass"><img class="connect" src="/static/img/twitter.jpg" alt="Twitter" /> </a></li>
+    <li><a class="instagram" href="http://instagram.com/studentclass">  <img class="connect" src="/static/img/insta.png" alt="Instagram" /> </a></li>
+    
+
+</ul>
+
+    <p style="font: 14px Calibri"> This Web page is developed by Anish
+            <br> &copy; 2020-2021 STUDY Here. All Rights Reserved. </p>
+</div>
+
+    
+   
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
+  

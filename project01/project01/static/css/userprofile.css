@@ -1,0 +1,82 @@
+{% load staticfiles %}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+
+/*  .imgcontainer { text-align: center; margin: 24px 0 12px 0; position: relative; }
+
+   img.avatar { width: 50%; border-radius: 50%; }
+*/
+    .body-container { font-family: 'Quicksand', sans-serif; background-image: linear-gradient(#4080bf, #b3cce6); }
+
+    .profile-container { text-align: center; height: 700px; width: auto; padding: 2px 50px; color: white;
+            margin: 60px 150px; background-image: linear-gradient(#f0f0f5, #ffffff); border-radius: 12px;}
+
+    .editprofile { border-radius: 4px; margin-top: 15px; font-weight: bold;
+            background-image: linear-gradient(#f3f6f6, #f0f4f4); color: black; padding: 5px 10px; text-align: center; 
+            font-size: 16px; height: 30px; width: 130px; } 
+
+    .profile-cont { display: flex; justify-content: safe left; text-align: center; width: auto; padding-top: 20px; margin: 20px 0px;
+                    color: black; background-image: linear-gradient(#f0f0f5, #ffffff); border-radius: 12px;}
+
+    .profile-item1 { border:1px solid #C4C4C4; color: black; margin: 40px 10px; padding: 0px 10px; width: 40%; }
+    .profile-item2 { border:1px solid #C4C4C4; margin: 40px 10px; font-family: 'Oxygen', sans-serif; font-weight: bold; color: black; padding: 0px 10px; width: 60%;}
+    .profile-item-cont { }
+    .profile-item-cont.text { border: 1px solid black; padding: 5px 10px; }
+
+    .input-fields{ margin: 10px; display: flex; justify-content: center; border-bottom: 1px solid grey; }
+
+    h1 { font-size: 20px; color: black; text-align: left; border-bottom: 1px solid #C4C4C4;}
+
+    .username-head { margin: 5px; font-family: 'Oxygen', sans-serif; font-size: 22px;}
+
+    .profileimg {height: 130px; width:130px; float:center; margin: 10px 30px; }
+    .profilepicedit {height: 30px; width:30px; float:right; padding: 20px; border-radius:120px;}
+
+    .userprofile { text-align: left; font-weight: bold;}
+    .field { margin: 0px; border-top: 1px solid grey; }
+
+    .label { margin: 10px 0px; font-family: 'Oxygen', sans-serif; font-size: 14px;}
+    .user-data { margin-top: 5px; font-family: 'Oxygen', sans-serif; font-size: 14px; color: #0066cc; }
+    .texts  { border: 1px solid grey; padding: 2px 10px; margin-top: 10px; height: 40px; width:100%; }
+
+    .input-fields-label  {width:20%; margin:25px; text-align: left; font-size: 14px;}
+    .edit-fields {width:80%; padding: 5px; margin-top: 0px;}
+
+    .save { border: 1px solid #034A25; border-radius: 4px; margin-top: 15px;  
+            background-image: linear-gradient(#1a75ff, #0052cc); color: white; padding: 5px 10px; text-align: center; 
+            font-size: 16px; height: 30px; width: 130px; } 
+
+    .cancel { border: 1px solid #476b6b; border-radius: 4px; margin-top: 15px;  
+            background-image: linear-gradient(#f3f6f6, #f0f4f4); color: black; padding: 5px 10px; text-align: center; 
+            font-size: 16px; height: 30px; width: 100px; } 
+
+    /*.login, .register { border: 1px solid #034A25; margin-top: 15px; background-image: linear-gradient(#3d5c5c, #141f1f); 
+            color: white; padding: 5px 10px; text-align: center; font-size: 16px; height: 30px; width: 100px; }
+
+    .login:hover, .register:hover { background-image: linear-gradient(#b3cccc, #476b6b); color: white; }*/
+
+    .menu {background-image: linear-gradient(#264d73, #0d1a26); margin: 10px 30px; padding: 0px; }
+    
+    .logo {list-style: none; overflow: hidden; padding: 5px 10px 10px 10px; margin:0; float: left;  }
+
+    .logo a {font-size: 22px; text-decoration: none; display:inline-block; text-align: center; padding: 10px; color: white; }
+
+    .menu-list {list-style: none; overflow: hidden; padding: 0; margin:0; }
+    .menu-list li { float: right; }
+    .menu-list li a { cursor: pointer; color: white; display:inline-block; text-align: center; text-decoration: none; padding: 20px 30px; }
+    .menu-list li a:hover { background-image: linear-gradient(#3973ac, #204060); color: white; }
+
+    .dropdown-menu { padding: 3px; background-color: #ecf2f9; border: 1px solid white; height: auto; border-radius: 6px; display:none; position: absolute; z-index: 1; min-width: 100px;}
+    .dropdown-menu li { margin: 0px; background-color: #ecf2f9; display: block; float: none;  border-bottom: 1px solid #a3c2c2;}
+    .dropdown-menu li a { font-size: 14px;text-align: left; color: black; display: block; padding: 10px 20px; }
+    .dropdown-menu li a:hover { background-image: linear-gradient(#6699cc, #8cb3d9); transition: all 1s;}
+    .menu-list li:hover .dropdown-menu { display:block; 
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in; }
+    .dropdown-menu a:hover .dropdown-menu {background-color: #ddd;}
+ 
+   
+    

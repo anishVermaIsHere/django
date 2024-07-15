@@ -1,0 +1,47 @@
+{% extends 'sampleformhome.html'%}
+{% load static %}
+{% block title%} User Register |
+{% endblock title %}
+{% block content %}
+
+<html>
+<head>
+
+    <style type="text/css">
+
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+    body {font-family: 'Quicksand', sans-serif; background-image: linear-gradient(#669999, #c2d6d6);}
+
+    .body-container {margin: 20px; background: url("../img/bodybackg.jpg") 50% 0 no-repeat; padding: 100px 400px;}
+        
+    .container { height:200px; font: 14px Tahoma; width: 400px; border:none; padding: 30px 50px;
+                box-shadow: 0 0 30px #19194d; background-image:linear-gradient(#F3F3F3, #F3F3F3); border-radius: 12px; }
+
+    .successfully {height: 80px; width:80px; display: block; margin-left: auto; margin-right: auto; }       
+    h5 { margin-top:30px; margin-bottom: 0px; font: 22px Tahoma; text-align: center; color: green;}
+    .goto { color: black; font-size: 16px; text-align: center;}
+
+   </style>
+
+</head>
+
+<body>
+<div class="body-container">  
+    <div class="container">
+    
+       <img src="{% static "img/successfully.png" %}" class="successfully"/>
+
+       <h5> Your Registration is done successfully </h5><hr>
+
+       <p class="goto"> Go to login page and open your account</p>
+
+
+    </div>
+</div>
+    
+</body>
+
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+﻿
+
+html {
+    
+      font-family:Tahoma;
+      font-size:15px;
+      background-color:#e2e2e2;
+}
+
+
+
+form {
+    
+    background-size:100% 100%;
+    background-color:#e2e2e2;
+    border:3px solid red;
+}
+div {
+    margin-top:0;
+    margin-bottom:0;
+    max-height:30%;
+    max-width: 70%;
+    background-color: #85C1E9;
+   border:1px;
+    
+}
+
+h2 {
+    color:;
+}
+
+.button {
+    background-color: #9aa5b3;
+    font-family:Tahoma;
+    padding:5px 20px;
+    color:white;
+
+}
+
+.button:hover {
+    background-color: #85C1E9;
+}
+
+.prac_tbl{
+    
+    background-color:#5DADE2;
+
+}
+
+

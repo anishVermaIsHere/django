@@ -1,0 +1,34 @@
+
+h1 {
+    margin-right:0px;
+    margin-left:0px;
+    font-family: Cambria;
+    font-size: 26;
+    
+}
+
+body {
+    margin-top:60px;
+    background-color: #5c5c5c;
+    font-family: Nexa Light;
+    font-family: 15px;
+    
+}
+
+.div1 {
+    padding: 5px 10px 10px 10px;
+
+    margin-right:100px;
+    margin-left:100px;
+    background-color: #e0e0e0; 
+    
+
+}
+
+.div2 {
+    margin-right:300px;
+    margin-left:300px;
+    background-color: #e0e0e0;
+    
+
+}

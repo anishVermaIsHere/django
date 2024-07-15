@@ -1,0 +1,118 @@
+{% extends 'sampleformhome.html'%}
+{% load static %}
+{% block title%} User Register |
+{% endblock title %}
+{% block content %}
+
+<html>
+<head>
+
+    <style type="text/css">
+
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+    body {font-family: 'Quicksand', sans-serif; background-image: linear-gradient(#669999, #c2d6d6);}
+
+    .body-container { margin: 20px; justify-content: center; 
+            background: url("../img/bodybackg.jpg") 50% 0 no-repeat; padding: 100px 500px; }
+        
+    .container { height:550px; font: 14px Tahoma; width: 350px; display: flex; justify-content: center; 
+                box-shadow: 0 0 30px #19194d; background-image:linear-gradient(#F3F3F3, #F3F3F3);border-radius: 12px; }
+                        /*clip-path: polygon(36% 0, 92% 0, 60% 100%, 0% 100%); */ 
+    h5 { margin-top:30px; margin-bottom: 0px; font: 22px Tahoma; text-align: center; }
+        form { padding: 10px; margin: 20px 0; margin: 0px;}
+
+    /*    .field { margin-top: 0px; line-height: 50px; border:1px solid #001433; color: black; border-radius:8px; height: 350px; max-width:300px; margin:50px; background-image: linear-gradient( #d1e0e0, #f0f5f5); background-color: #b3cccc; #001433; 
+       transition: background-color 2s; box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5); opacity: 0.9;}*/
+        /*field:hover { border:1px solid #f0f5f5; color: black; background-color:#f0f5f5; transition: background-color 2s; }*/
+
+        .field-container { box-sizing: border-box; width: 350px; padding: 5px;  
+                          border-radius: 12px; background-color: #F3F3F3;}
+
+       .input-fields{ margin: 10px; }
+       .name-container {display: flex; justify-content: center; flex-flow: row; }
+       .name-fields { padding: 0px 10px; }
+
+       .fname-cont,.lname-cont { border-radius: 6px; padding: 2px 10px; margin-top: 5px; height: 40px; width: 100%; }
+
+       .text-cont { border-radius: 6px; padding: 2px 10px; margin-top: 5px; height: 40px; width:100%; }
+
+       .password-cont { padding: 2px 10px; margin-top: 10px; border: 1px solid black; height: 40px; width: 100%; }
+        
+        .submit{ border: 1px solid #034A25; border-radius: 6px; margin-top: 15px;  
+            background-image: linear-gradient(#3d5c5c, #141f1f);
+            color: white; padding: 5px 10px; text-align: center; font-size: 16px; 
+            height: 40px; width: 100%; } 
+
+        .submit:hover { background-image: linear-gradient(#b3cccc, #476b6b); color: white; }
+
+   </style>
+</head>
+
+<body>
+<div class="body-container">  
+    <div class="container">
+            <div class="field">
+                    
+                        <form action="register" method="post" target="_blank" name="userform">
+                            {% csrf_token %}
+                        <div class="field-container">
+                            <h5> User Register </h5><hr>
+
+                            <div class="name-container">
+                                    <div class="name-fields">
+                                        <label for="fname">First Name</label>
+                                        <input class="fname-cont" type="text" name="first_name" placeholder="First Name" required>
+                                    </div>
+                            
+                                    <div class="name-fields">
+                                        <label for="lname">Last Name</label>
+                                        <input class="lname-cont" type="text" name="last_name" placeholder="Last Name" required>
+                                    </div>
+                            </div>
+<!-- 
+                            <div class="input-fields">
+                                <label for="fname">Phone</label>
+                                <input class="text-cont" type="number" name="phone" placeholder="Enter your phone" required>
+                            </div> -->
+
+                            <div class="input-fields">
+                                <label for="fname">Email</label>
+                                <input class="text-cont" type="email" name="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="input-fields">
+                                <label for="fname">Username</label>
+                                <input class="text-cont" type="text" name="username" placeholder="Enter your username" required>
+                            </div>
+
+                            <div class="input-fields">
+                                <label for="fname">Password</label>
+                                <input class="text-cont" type="password" name="password1" placeholder="Enter your password" required>
+                            </div>
+
+                            <div class="input-fields">
+                                <label for="fname">Re-type Password</label>
+                                <label for="fname"></label>
+                                <input class="text-cont" type="password" name="password2" placeholder="Confirm password" required>
+                            </div>
+
+                            <div class="input-fields">
+                            <input type="submit" class="submit" name="submit">
+                            </div>
+
+                        </div>
+
+                            
+                        </form>        
+
+            </div>
+
+    </div>
+</div>
+    
+</body>
+
+
+</html>
+
+{% endblock %}

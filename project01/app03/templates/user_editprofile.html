@@ -1,0 +1,151 @@
+{% extends 'useraccount.html'%}
+{% load static %}
+{% block title%} Edit Profile
+{% endblock title %}
+{% block content %}
+
+
+
+  
+    <link rel="stylesheet" type="text/css" href="{% static "css/userprofile.css" %}">
+
+
+<body class="body-container">
+        
+        <div class="profile-container">
+                        <!-- <input type="submit" name="save" value="Edit Profile" class="editprofile"> -->
+
+            <div class="profile-cont">
+
+                <div class="profile-item1">
+                      <h1> Profile Information </h1> 
+                    <img src="{% static "img/profileicon.png" %}" class="profileimg"/>
+
+                    <form action="">
+                      <label for="img">Update Profile Picture:</label>
+                      <input type="file" id="img" name="img" accept="image/*">
+                      <input type="submit" value="Update">
+                    </form>
+
+                    <!-- <input type="image" src="{% static "img/profilepicedit.jpg" %}" class="profilepicedit" id="img" name="img" accept="image/*">    -->                                   
+                                      
+                           
+                    <div class="profile-item-cont">
+                        <h2 class="username-head">{{user.first_name | capfirst}} {{user.last_name | capfirst}}</h2>
+                        
+                        <div class="userprofile">
+                           <div class="field">
+                           <label class="label">Email id:</label>
+                           <p class="user-data">{{user.email}} </p>
+                            </div>
+
+                            <div class="field">
+                            <label class="label">Username:</label>
+                            <p class="user-data">{{user.username}}</p>
+                            </div>
+
+                            <div class="field">
+                            <label class="label">Phone:</label>
+                            <p class="user-data">{{user.username}}</p>
+                            </div>
+
+                            <div class="field">
+                            <label class="label">About:</label> 
+                            <p class="user-data">Full Stack Designer I enjoy creating user-centric, delightful and human experiences. </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="profile-item2">
+                   <form method="post" action="" name="userprofile"> 
+                    {% csrf_token %}
+                    <div class="profile-item-cont">
+                        
+                        <div class="input-fields">
+                            <div class="input-fields-label">
+                                <label for="fname" class="">First Name:</label>
+
+                            </div>
+
+                            <div class="edit-fields">
+                                <input type="text" name="first_name" class="texts">
+                            </div>
+                        </div>
+
+                        <div class="input-fields">
+                            <div class="input-fields-label">
+                                <label for="lname">Last Name:</label>
+                            </div>
+
+                            <div class="edit-fields">
+                                <input type="text" name="last_name" class="texts">
+                            </div>
+                        </div>
+
+                        <div class="input-fields">
+                            <div class="input-fields-label">
+                                <label for="uname">Username:</label>
+                            </div>
+
+                            <div class="edit-fields">
+                                <input type="text" name="username" class="texts">
+                            </div>
+                        </div>
+
+                        <div class="input-fields">
+                            <div class="input-fields-label">
+                                <label for="phone">Phone:</label>
+                            </div>
+
+                            <div class="edit-fields">
+                                <input type="phone" name="phone" class="texts">
+                            </div>
+                        </div>
+
+                        <div class="input-fields">
+                            <div class="input-fields-label">
+                                <label for="about">Email:</label>
+                            </div>
+
+                            <div class="edit-fields">
+                                <input type="text" name="email" class="texts">
+                            </div>
+                        </div>
+
+                        <div class="input-fields">
+                            <div class="input-fields-label">
+                                <label for="about">About:</label>
+                            </div>
+
+                            <div class="edit-fields">
+                                <textarea id="about" name="about" rows="4" cols="45" style="resize:none">
+  
+                                </textarea>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <div class="button-cont">
+                        <input type="submit" name="save" value="Save Changes" class="save">
+                        <input type="submit" name="cancel" value="Cancel" class="cancel">
+
+                    </div>
+                    
+                    </form>
+
+                </div>
+
+
+
+            </div>
+            
+        </div>
+ 
+</body>
+
+{% endblock %}

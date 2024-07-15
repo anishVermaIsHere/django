@@ -1,0 +1,129 @@
+
+{% extends "studentclass_home.html" %}
+
+{% load static %}
+{% block title%} 
+{% block content %}
+
+<html>
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/studentform.css' %}" type="text/css"/>
+
+        <script type="text/javascript">
+            
+        function validate()
+            {
+
+                    if (document.userinfo.name.value== "") 
+                    {
+                        alert("Please enter your Name");
+                        document.userinfo.name.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.sex.value== "") 
+                    {
+                        alert("Please select your Sex");
+                        document.userinfo.sex.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.phone.value== "") 
+                    {
+                        alert("Please enter your phone number");
+                        document.userinfo.phone.focus();
+                        return false;
+                    }
+
+                     if (document.userinfo.email.value== "") 
+                    {
+                        alert("Please enter your email id");
+                        document.userinfo.email.focus();
+                        return false;
+                    }
+
+            }
+
+        function validateEmail() 
+            {
+                var emailID = document.userinfo.email.value;
+                atpos = emailID.indexOf("@");
+                dotpos = emailID.lastIndexOf(".");
+         
+                    if (atpos < 1 || ( dotpos - atpos < 2 )) 
+                    {
+                        alert("Please add @")
+                        document.userinfo.email.focus();
+                        return false;
+                    }
+                return( true );
+            }
+        
+            // Get the modal
+                var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                        }
+                    }
+    </script>
+
+
+                                <!--  Form | User Information Form -->
+
+<div class="div2" width="300px" height="220px">
+
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+                Student Register   </button>
+
+    <form action="user_details" onsubmit="return(validate());" method="post" target="_blank" id="button" name="userinfo">
+    {% csrf_token %}
+       <fieldset class="field2">
+          <legend><strong> Student Information </strong><br></legend>
+            
+            <table  border="0" height="40%" width="100%">
+                <tr>
+                    <td height="10%"><label for="username">Name  </label> </td>
+          
+                    <td>    <input type="text" class="text" name="name" placeholder="Enter the name"> </td>
+                </tr>
+
+                <tr>
+                    <td height="10%"><label for="usersex"> Sex  </label> </td>
+          
+                    <td>    
+                            <select id="sex" name="sex"> 
+                                    <option value="male">   Male   </option>
+                                    <option value="female">   Female   </option>
+                            </select> 
+                    </td>
+                </tr>
+
+                <tr>  
+                    <td  height="10%">  <label for="userenrol">Enrolment  </label>  </td>
+          
+                    <td>  
+                        <input type="number" name="enrol" placeholder="Enter the enrolment no.">  
+                    </td>
+                
+                </tr>
+          
+                <tr>
+                    <td  height="10%">  <label for="usercourse">Course  </label>  </td>
+
+                    <td>  <input type="text" name="course"  placeholder="Enter the course">  </td>
+
+                </tr>
+                 
+              </table>
+              <p>
+            <button class="button" type="submit" value="submit" form="button"> Submit </button>
+            </p>
+       </fieldset>
+         
+    </form>
+
+ { % endblock %}

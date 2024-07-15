@@ -1,0 +1,62 @@
+{% load static %}
+
+<html>
+<head>
+    <title> {% block title %} {% endblock title %} Skymax</title>
+    
+    <script>
+
+        function validate()
+        {
+            
+        }
+
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="{% static "css/sample.css" %}">
+</head>
+
+<body class="body-cont">
+            <div class="menu">
+                <nav class="navbar">
+                    <ul class="logo">
+                        <a href="/">Skymax</a>
+                    </ul>
+
+                    <ul class="menu-list">
+                        <li> <a href="contactus">Contact</a></li>
+                        <li> <a href="registerform" name="register">Register</a></li>
+                        <li> <a href="loginform" name="login">Login</a></li>
+                        <li> <a href="aboutus">About us</a></li>
+                        
+                        <li> <a href="services">Services</a>
+                            <ul class="dropdown-menu">
+                                            <li> <a href="#">Banking</a> </li>
+                                            <li> <a href="#">Accounting</a> </li>
+                                            <li> <a href="#">Product Selling</a> </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            {% block content %}
+            
+
+        <div class="img-cont">
+
+           <!--  <img src="{% static "img/foresttopview - Copy.jpg" %}"> -->
+        </div>
+
+        <div class="cont">
+            <h1> Welcome </h1>
+            <p>There is no solitude in the world like that of the big city.</p>
+
+        </div>
+
+            
+</body>
+            {% endblock %}  
+
+</html>
